@@ -1,0 +1,5 @@
+To Do: Completar a leitura de arquivo no teste de unidade
+
+TESTES DE SERVIÇO / API / WEB SERVICES
+
+- Objetivo: Testar a comunicação e processamento entre APIs / Serviços
