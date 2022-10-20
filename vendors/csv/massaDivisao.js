@@ -1,4 +1,4 @@
-[
+module.exports.array = [
     {
         "num1": 10,
         "num2": 5,
@@ -22,6 +22,6 @@
     {
         "num1": 7,
         "num2": 0,
-        "resultadoEsperado": " Infinity"
+        "resultadoEsperado": Infinity
     }
 ]

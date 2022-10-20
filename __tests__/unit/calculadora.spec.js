@@ -3,7 +3,7 @@
 const calculadora = require("../../src/calculadora");
 
 // Apontamento para o arquivo de massa de teste
-const arquivoCsv = require("../../vendors/csv/massaDivisao.csv");
+const arquivoJson = require("../../vendors/csv/massaDivisao");
 
 // Funções de teste de unidade
 test("Somar 5 + 7", () => {
@@ -90,7 +90,7 @@ test.each(massaDivisao)("Dividir %f / %f", (num1, num2, resultadoEsperado) => {
     expect(resultadoAtual).toBe(resultadoEsperado);
 })
 
-test.each(arquivoCsv.array.map(elemento => [
+test.each(arquivoJson.array.map(elemento => [
     elemento.num1,
     elemento.num2,
     elemento.resultadoEsperado
