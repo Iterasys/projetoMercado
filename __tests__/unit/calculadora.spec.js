@@ -2,6 +2,9 @@
 // Apontamento para o arquivo de desenvolvimento que vamos testar
 const calculadora = require("../../src/calculadora");
 
+// Apontamento para o arquivo de massa de teste
+const arquivoCsv = require("../../vendors/csv/massaDivisao.csv");
+
 // Funções de teste de unidade
 test("Somar 5 + 7", () => {
     // 1 - Configura
@@ -37,4 +40,69 @@ test("Subtrair 15 - 7", () => {
     // 3 - Valida / Assert
     expect(resultadoAtual).toBe(resultadoEsperado);
 
+})
+
+test("Multiplicar 3 * 7", () => {
+    // Configura
+    const num1 = 3;
+    const num2 = 7;
+    const resultadoEsperado = 21;
+
+    // Executa
+    const multiplicarDoisNumeros = calculadora.multiplicarDoisNumeros;
+    const resultadoAtual = multiplicarDoisNumeros(num1, num2);
+
+    // Valida
+    expect(resultadoAtual).toBe(resultadoEsperado);
+
+})
+
+test("Dividir 27 / 9", () => {
+    // Configura
+    const num1 = 27;
+    const num2 = 9;
+    const resultadoEsperado = 3;
+
+    // Executa
+    const dividirDoisNumeros = calculadora.dividirDoisNumeros;
+    const resultadoAtual = dividirDoisNumeros(num1, num2);
+
+    // Valida
+    expect(resultadoAtual).toBe(resultadoEsperado);
+})
+// HP ALM Data Driven Test
+let massaDivisao = [
+    [10, 5, 2],
+    [15, 3, 5],
+    [ 8, 4, 2],
+    [ 7, 0, Infinity]
+];
+
+test.each(massaDivisao)("Dividir %f / %f", (num1, num2, resultadoEsperado) => {
+    // Configura
+    // Dados de entrada e resultado esperado são providos pela lista massaDivisao
+
+    // Executa
+    const dividirDoisNumeros = calculadora.dividirDoisNumeros;
+    const resultadoAtual = dividirDoisNumeros(num1, num2);
+
+    // Valida
+    expect(resultadoAtual).toBe(resultadoEsperado);
+})
+
+test.each(arquivoCsv.array.map(elemento => [
+    elemento.num1,
+    elemento.num2,
+    elemento.resultadoEsperado
+]))
+("DDT: Dividir %f / %f", (num1, num2, resultadoEsperado) => {
+
+    // Configura
+
+    // Executa
+    const dividirDoisNumeros = calculadora.dividirDoisNumeros;
+    const resultadoAtual = dividirDoisNumeros(num1, num2);
+
+    // Valida
+    expect(resultadoAtual).toBe(resultadoEsperado);
 })

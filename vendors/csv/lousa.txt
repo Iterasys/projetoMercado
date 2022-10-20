@@ -3,3 +3,43 @@ To Do: Completar a leitura de arquivo no teste de unidade
 TESTES DE SERVIÇO / API / WEB SERVICES
 
 - Objetivo: Testar a comunicação e processamento entre APIs / Serviços
+
+Formatos de Arquivos de Dados em formato de texto
+
+CSV (Comma Separeted Values - Valores Separados por Virgula)
+nome, telefone
+Jose, 9845912181
+Ana Carolina Silksty, 9787870999
+
+Posicional
+nome                telefone
+Jose                9845912181
+Ana Carolina Silksty9787870999
+
+XML (eXtensible Markup Language - Linguagem de Marcação Fléxível)
+<clientes>
+    <cliente>
+        <nome>Jose</nome>
+        <telefone>9845912181</telefone>
+    </cliente>
+    <cliente>
+        <nome>Ana Carolina Silksty</nome>
+        <telefone>9787870999</telefone>
+    </cliente>
+</clientes>
+
+JSON (JavaScript Object Notation)
+]
+    {
+        "nome": "Jose",
+        "telefone": "9845912181"
+    },
+        "nome": "Ana Carolina Silksty",
+        "telefone": "9787870999"
+    }
+]
+
+
+
+
+
