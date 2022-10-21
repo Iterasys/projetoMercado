@@ -39,7 +39,18 @@ JSON (JavaScript Object Notation)
     }
 ]
 
+TDD = Test Driven Development
+      Desenvolvimento Direcionado por Testes
 
+Teste de Unidade = um codigo testando um outro
+10 funções --> 10 esqueletos
+10 testes de unidade - 1 por função
+rodar todo o Direcionado
+Dia Passou Falhou
+1     0      10
+2     3       7
+3     5       5
+4     10      0
 
 
 
