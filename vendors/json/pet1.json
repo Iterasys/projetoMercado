@@ -1,0 +1,18 @@
+{
+    "id": 17321812,
+    "category": {
+      "id": 2,
+      "name": "cat"
+    },
+    "name": "Garfield",
+    "photoUrls": [
+      ""
+    ],
+    "tags": [
+      {
+        "id": 3,
+        "name": "vaccinated"
+      }
+    ],
+    "status": "available"
+  }
