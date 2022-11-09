@@ -1,0 +1,33 @@
+Testes Web
+- Teste de Regressão = tudo de novo a cada mudança
+--> Ferramenta Paga: Mercury
+--> Ferramenta Open Source / Gratuito: Selenium (Se)
+                             - usos: Shampoo Anti-caspa, Alto falantes e pesticida
+    EUA
+    ThoughtWorks (TW)
+    2004 - Funcionarios
+
+Diferenciais:
+- Multi Sistema Operacional: Windows, Linux, Mac, etc
+- Multi Browsers: Chrome, Firefox, Opera, Safari, Edge, etc
+- Multi Linguagem: Java, Python, C#, JavaScript, Ruby, etc
+
+Tudo isso é o que chamamos de Selenium WebDriver (anteriormente, Remote Control/RC)
+
+PoC = Proof of Concept = Prova de Conceito
+
+2007 - Japão - TW - funcionária --> Selenium IDE
+    Ferramenta do tipo: Capture & Playback / Record and Play / Gravador
+    - gravar eu fazendo um teste manual, salvar e executar novamente
+    - entender / aprender / tirar dúvidas sobre como automatizar os testes do site
+    - exportar o código fonte para servir de base para o começo de um projeto
+    Acusações / Pre-conceitos:
+    - verborragica: escreve código demais
+    - estilo muito simples de código: não gera em Gherkin/BDD, em Page Objects (! voltou a moda)
+    - dificil de manter / modifica o código --> basicamente, fazer tudo de novo
+    - emburrece - você não aprender a automatizar se não for logo programando
+    ----> Bicicleta de rodinhas
+
+É uma extensão para navegadores como Firefox, Chrome e Edge
+
+
