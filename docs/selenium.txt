@@ -30,4 +30,27 @@ PoC = Proof of Concept = Prova de Conceito
 
 É uma extensão para navegadores como Firefox, Chrome e Edge
 
+Como funciona o controle do Selenium sobre o navegador/browser?
+
+Código-fonte
+    |
+Selenium---------> Driver ---------> Browser
+                  1 para cada
+               versão de browser
+
+Gerenciamento dos Drivers
+- Pode ser feito de 3 formas:
+1 - Download do driver desejado a partir do site do fornecedor
+    e coloca em cada projeto
+2 - Download do driver desejado a partir do site do fornecedor
+    e coloca em uma pasta única compartilhada com todos os projetos
+    Normalmente, envolve adicionar o apontamento nas variaveis de ambiente
+3 - Pode adicionar o pacote WebDriverManager ao seu projeto
+    Não recomendavel no momento para JavaScript
+
+
+
+
+
+
 
