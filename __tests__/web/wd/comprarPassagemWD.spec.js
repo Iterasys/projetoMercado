@@ -35,9 +35,15 @@ describe('Comprar Passagem WD', () => {
             await dropdown.findElement(By.xpath("//option[. = 'Cairo']")).click()
         }
 
-        
+        // clicar no botão Find Flights (Procurar Voos)
+        await driver.findElement(By.css('input.btn.btn-primary')).click()
 
+        // validar o titulo da guia e a frase de titulo da seleção dos vôos
+        console.log("Get Title = " + await driver.getTitle()) //escreve no terminal o que está no getTitle
+        assert(await driver.getTitle() == 'BlazeDemo - reserve')
         
+        assert(await driver.findElement(By.xpath('//h3')).getText() == 'Flights from São Paolo to Cairo:')
+
     })
 
 })
