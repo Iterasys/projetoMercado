@@ -1,10 +1,12 @@
 // Bibliotecas
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
+require('chromedriver') // <-- não foi gerado automaticamente
+// apontamento para o chromedriver. Ex: Firefox = geckodriver
 
 // Suite de Teste
 describe('Comprar Passagem', function() {
-  this.timeout(60000)   // espera implicita / paciência = 30.000 milissegundos
+  //this.timeout(60000)   // espera implicita / paciência = 30.000 milissegundos
   let driver            // objeto do Selenium WebDriver
   let vars              // lista para guardar variaveis e informações
 
@@ -12,6 +14,7 @@ describe('Comprar Passagem', function() {
   beforeEach(async function() {
     // Instancia o objeto Selenium WebDriver para controlar o Chrome Driver
     driver = await new Builder().forBrowser('chrome').build()
+    driver.manage().setTimeouts({implicit: 60000}) // define a espera
     vars = {}           // inicializa a lista como vazia
   })
 
@@ -43,11 +46,13 @@ describe('Comprar Passagem', function() {
     await driver.findElement(By.css(".btn-primary")).click()
 
     // Carrega a página com a lista de vôos
+    
 
     // Seleciona o vôo que está na primeira linha da tabela
     await driver.findElement(By.css("tr:nth-child(1) .btn")).click() // 1 = 1ª linha
 
     // Carrega a página de pagamento
+   
 
     // Preencher os campos do formulário
 
@@ -71,6 +76,7 @@ describe('Comprar Passagem', function() {
     await driver.findElement(By.css(".btn-primary")).click()
 
     // Carrega a página de agradecimento / confirmação
+
 
     // Validamos a mensagem de agradecimento e o preço da passagem
 
