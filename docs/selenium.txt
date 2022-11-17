@@ -49,6 +49,17 @@ Gerenciamento dos Drivers
     Não recomendavel no momento para JavaScript
 
 
+BDD: Forma de organização para melhorar a comunicação do time
+- Foco na visão de comportamento do PO
+- Colaborativo - todo mundo dá opinião
+- Pode escrever os critérios de aceitação em Gherkin (Dado-Quando-Então)
+- Pode ser usado como base para conectar a automação (Cucumber)
+
+Page Objects: Forma de organização da automação de teste pensando em
+              projetos com interfaces ricas e com separação de papeis
+
+              
+
 
 
 
