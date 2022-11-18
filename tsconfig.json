@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "commonjs",
+        "rootDir": ".",
+        "baseUrl": ".",
+        "noEmit": false,
+        "outDir": "./build",
+        "noImplicitAny": false,
+        "noImplicitThis": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "esModuleInterop": true,
+        "allowJs": true
+    },
+    "include": [
+        "features/step_definitions/*.ts"
+    ]
+}
