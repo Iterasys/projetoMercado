@@ -1,6 +1,13 @@
 const { Builder, By, Key } = require('selenium-webdriver') // Selenium WebDriver
 require('chromedriver')                               // Chrome Driver
 const assert = require('assert')                      // Assert - para faze as validações
+const fsp = require('fs')  // Biblioteca de acesso ao sistema de arquivos (File System)
+// Funções de apoio
+async function takeScreenshot(driver, file){
+    let image = await driver.takeScreenshot()
+    await fsp.writeFile(file, image, 'base64')
+}
+
 
 // Suite de Teste - Conjunto de testes
 describe('Login', function (){
@@ -24,6 +31,8 @@ describe('Login', function (){
     // Os Testes
     it('Experimentando Login', async function (){
         await driver.get('https://www.blazedemo.com')         // acessar a home do site
+        takeScreenshot(driver, 'print1 - home.png')
+
         await driver.findElement(By.linkText('home')).click() // clicar no link escrito home
 
         // validar se entrou na página de login
