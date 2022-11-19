@@ -1,12 +1,17 @@
 import { Given, When, Then, Before, After } from "@cucumber/cucumber"
-import { Builder } from "selenium-webdriver"
-require("chromedriver")
+import { Builder } from "selenium-webdriver"        // Selenium
+require("chromedriver")     // ChromeDriver - tradutor do browser
 import { assert } from "chai"
 import HomePage = require("../../pages/HomePage")
+const chrome = require('selenium-webdriver/chrome')
+// selenium - selenium-webdriver/chrome - chromedriver - browser
 
 Before(async function () {
+    const options = new chrome.Options().headless()
+
     this.driver = await new Builder()
         .forBrowser('chrome')
+        //.setChromeOptions(options)
         .build()
     this.driver.manage().setTimeouts({ implicit: 60000 })
     this.driver.manage().window().maximize()
