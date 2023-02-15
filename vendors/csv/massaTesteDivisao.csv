@@ -1,0 +1,7 @@
+﻿numA,numB,resultadoEsperado
+8,4,0
+7,0,Infinity
+-9,3,-3
+5,4,1.25
+10,5,2
+1000,40,25
